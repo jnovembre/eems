@@ -1,28 +1,25 @@
+# BOOST_LIB     = /usr/local/lib
+# BOOST_INCLUDE = /usr/local/include
+# EIGEN_INCLUDE = /usr/local/opt/eigen/include/eigen3
+BOOST_LIB     = $(SCRATCH)/boost-1.57.0/lib
+BOOST_INCLUDE = $(SCRATCH)/boost-1.57.0/include
+EIGEN_INCLUDE = $(HOME)/eigen-3.2.2
 
-EIGEN_INC = /usr/local/opt/eigen/include/eigen3
-BOOST_LIB = /usr/local/lib
-BOOST_INC = /usr/local/include
-
-EXE = runeems_snps
 OBJ = runeems_snps.o eems.o util.o mcmc.o draw.o habitat.o graph.o
 
-CXXFLAGS = -I${BOOST_INC} -I${EIGEN_INC} -O3 -DNDEBUG
-LDFLAGS = \
-	-lboost_system \
-	-lboost_program_options \
-	-lboost_filesystem
+CXX      = g++
+CXXFLAGS = -I$(BOOST_INCLUDE) -I$(EIGEN_INCLUDE) -O3
+LDFLAGS  = -lboost_system -lboost_program_options -lboost_filesystem
 
-all:
-	@echo "Use 'make linux' on a Linux machine, or 'make darwin' on a Mac."
+all: runeems_snps
 
-linux: $(OBJ)
-	$(CXX) $(CXXFLAGS) -o $(EXE) $^ -L${BOOST_LIB} -Wl,-R${BOOST_LIB} $(LDFLAGS)
+runeems_snps: $(OBJ)
+	$(CXX) $(CXXFLAGS) -o $@ $^ -L$(BOOST_LIB) $(LDFLAGS)
 
-darwin: $(OBJ)
-	$(CXX) $(CXXFLAGS) -o $(EXE) $^ -L${BOOST_LIB} $(LDFLAGS)
-
-$(OBJ): %.o: %.cpp
-	$(CXX) $(CXXFLAGS) -c $< -o $@
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $<
 
 clean:
-	rm -f $(OBJ) $(EXE) *~
+	rm -f runeems_snps $(OBJ)
+
+
