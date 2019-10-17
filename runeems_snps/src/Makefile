@@ -25,11 +25,11 @@ EIGEN_INCLUDE = $(HOME)/eigen-3.2.2
 # you may add the "-static" option to LDFLAGS to compile a statically
 # linked binary executable. In a macOS environment, statically linked
 # libraries are not supported, but we can at least link to the static
-# versions of the Boost libraries, like so:
+# versions of the Boost libraries with the following settings:
 #
-# LDFLAGS = $(BOOST_LIB)/libboost_system.a \
-#           $(BOOST_LIB)/libboost_program_options.a \
-#           $(BOOST_LIB)/libboost_filesystem.a
+#   LDFLAGS = $(BOOST_LIB)/libboost_system.a \
+#             $(BOOST_LIB)/libboost_program_options.a \
+#             $(BOOST_LIB)/libboost_filesystem.a
 #
 CXX      = g++
 CXXFLAGS = -I$(BOOST_INCLUDE) -I$(EIGEN_INCLUDE) -O3
