@@ -1,4 +1,4 @@
-# A Makefile for generating the runeems_snps executable (static or
+# A Makefile for generating the runeems_sats executable (static or
 # dynamic) from the C++ source.
 #
 # To use this Makefile, you will need to adjust some of the settings
