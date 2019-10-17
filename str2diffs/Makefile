@@ -1,7 +1,4 @@
-
-
 RMDFILE=README
-
 
 all:
 	@echo "Spinning..."
@@ -11,3 +8,4 @@ all:
 clean:
 	@echo "Cleaning..."
 	rm -f *.Rmd *.html *.md
+

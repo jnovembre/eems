@@ -5,9 +5,9 @@
 # below to meet your computing environment
 
 # Default file paths for the Boost and Eigen libraries:
-# BOOST_LIB     = /usr/local/lib
-# BOOST_INCLUDE = /usr/local/include
-# EIGEN_INCLUDE = /usr/local/opt/eigen/include/eigen3
+BOOST_LIB     = /usr/local/lib
+BOOST_INCLUDE = /usr/local/include
+EIGEN_INCLUDE = /usr/local/opt/eigen/include/eigen3
 
 # Boost and Eigen library paths used on the midway2 cluster:
 #
@@ -17,9 +17,10 @@
 # 
 # Boost and Eigen library paths used in a macOS environment:
 #
-BOOST_LIB     = $(HOME)/boost-1.57.0/lib
-BOOST_INCLUDE = $(HOME)/boost-1.57.0/include
-EIGEN_INCLUDE = $(HOME)/eigen-3.2.2
+#  BOOST_LIB     = $(HOME)/boost-1.57.0/lib
+#  BOOST_INCLUDE = $(HOME)/boost-1.57.0/include
+#  EIGEN_INCLUDE = $(HOME)/eigen-3.2.2
+#
 
 # By default, a dynamic executable is created. In a Linux environment,
 # you may add the "-static" option to LDFLAGS to compile a statically

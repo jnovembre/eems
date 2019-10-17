@@ -1,4 +1,3 @@
-
 PLINKIO = /usr/local
 EXE = bed2diffs_v1
 OBJ = bed2diffs_v1.o data.o
