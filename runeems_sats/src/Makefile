@@ -2,7 +2,7 @@
 # dynamic) from the C++ source.
 #
 # To use this Makefile, you will need to adjust some of the settings
-# below to meet your computing environment
+# below to meet your computing environment.
 
 # Default file paths for the Boost and Eigen libraries:
 BOOST_LIB     = /usr/local/lib
