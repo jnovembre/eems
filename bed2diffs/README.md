@@ -1,11 +1,17 @@
 bed2diffs
 ---------
 
-`bed2diffs` is a small program that reads genetic data in plink binary format (i.e., from a set of three files with extensions bed/bim/fam) and computes the average genetic dissimilarity matrix.
+`bed2diffs` is a small program that reads genetic data in plink binary
+format (i.e., from a set of three files with extensions bed/bim/fam)
+and computes the average genetic dissimilarity matrix.
 
 ### Compilation
 
-`bed2diffs` uses the [libplinkio](https://github.com/fadern/libplinkio) library to read genotype data stored in plink binary format. To install libplinkio, first clone the GitHub repository and get the latest version (commit 781e9ee37076).
+`bed2diffs` uses the
+[libplinkio](https://github.com/fadern/libplinkio) library to read
+genotype data stored in plink binary format. To install libplinkio,
+first clone the GitHub repository and get the latest version (commit
+781e9ee37076).
 
 ```
 git clone https://github.com/mfranberg/libplinkio
@@ -13,7 +19,10 @@ cd libplinkio
 git checkout 781e9ee37076
 ```
 
-Then follow the instructions to install libplinkio to a custom location /path/to/plinkio. Finally, update `PLINKIO` in the Makefile in `src` and `src-without-openmp` directories.
+Then follow the instructions to install libplinkio to a custom
+location /path/to/plinkio. Finally, update `PLINKIO_LIB` and
+`PLINKIO_INCLUDE` in the Makefile in `src` and `src-without-openmp`
+directories.
 
 ```
 mkdir build
