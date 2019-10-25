@@ -9,13 +9,13 @@ BOOST_LIB     = /usr/local/lib
 BOOST_INCLUDE = /usr/local/include
 EIGEN_INCLUDE = /usr/local/opt/eigen/include/eigen3
 
-# Boost and Eigen library paths used on the midway2 cluster:
+# Boost and Eigen library paths we used on the midway2 cluster:
 #
-#  BOOST_LIB     = $(SCRATCH)/boost-1.57.0+gcc-7.2.0/lib
-#  BOOST_INCLUDE = $(SCRATCH)/boost-1.57.0+gcc-7.2.0/include
-#  EIGEN_INCLUDE = $(HOME)/eigen-3.2.2
+#  BOOST_LIB     = $(SCRATCH)/boost-1.57.0/lib
+#  BOOST_INCLUDE = $(SCRATCH)/boost-1.57.0/include
+#  EIGEN_INCLUDE = $(SCRATCH)/eigen-3.2.2
 # 
-# Boost and Eigen library paths used in a macOS environment:
+# Boost and Eigen library paths we used on a MacBook Pro:
 #
 #  BOOST_LIB     = $(HOME)/boost-1.57.0/lib
 #  BOOST_INCLUDE = $(HOME)/boost-1.57.0/include

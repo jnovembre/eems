@@ -11,9 +11,9 @@ EIGEN_INCLUDE = /usr/local/opt/eigen/include/eigen3
 
 # Boost and Eigen library paths we used on the midway2 cluster:
 #
-# BOOST_LIB     = $(SCRATCH)/boost-1.57.0/lib
-# BOOST_INCLUDE = $(SCRATCH)/boost-1.57.0/include
-# EIGEN_INCLUDE = $(SCRATCH)/eigen-3.2.2
+#  BOOST_LIB     = $(SCRATCH)/boost-1.57.0/lib
+#  BOOST_INCLUDE = $(SCRATCH)/boost-1.57.0/include
+#  EIGEN_INCLUDE = $(SCRATCH)/eigen-3.2.2
 # 
 # Boost and Eigen library paths we used on a MacBook Pro:
 #
