@@ -23,7 +23,7 @@ PLINKIO_INCLUDE = /usr/local/include
 #   LDFLAGS = $(PLINKIO_LIB)/libplinkio.a
 #
 CXX      = g++
-CXXFLAGS = -I${PLINKIO_INCLUDE} -O3
+CXXFLAGS = -I$(PLINKIO_INCLUDE) -O3
 LDFLAGS  = -lplinkio
 
 OBJ = bed2diffs_v1.o data.o
@@ -31,14 +31,10 @@ OBJ = bed2diffs_v1.o data.o
 all: bed2diffs_v1
 
 bed2diffs_v1: $(OBJ)
-	$(CXX) $(CXXFLAGS) -o $@ $^ -L$(BOOST_LIB) $(LDFLAGS)
+	$(CXX) $(CXXFLAGS) -o $@ $^ -L$(PLINKIO_LIB) $(LDFLAGS)
 
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $<
 
 clean:
 	rm -f bed2diffs_v1 $(OBJ)
-
-# ----------------------------------------------------
-
-CXXFLAGS = -I${PLINKIO} -O3
