@@ -10,8 +10,8 @@ PLINKIO_INCLUDE = /usr/local/include
 
 # The paths we used on the midway2 cluster:
 #
-  PLINKIO_LIB     = $(SCRATCH)/libplinkio-0.3.1/lib
-  PLINKIO_INCLUDE = $(SCRATCH)/libplinkio-0.3.1/include
+#  PLINKIO_LIB     = $(SCRATCH)/libplinkio-0.3.1/lib
+#  PLINKIO_INCLUDE = $(SCRATCH)/libplinkio-0.3.1/include
 #
 
 # By default, a dynamic executable is created. In a Linux environment,
@@ -24,7 +24,7 @@ PLINKIO_INCLUDE = /usr/local/include
 #
 CXX      = g++
 CXXFLAGS = -I$(PLINKIO_INCLUDE) -O3 -fopenmp
-LDFLAGS  = -lplinkio -static
+LDFLAGS  = -lplinkio
 
 OBJ = bed2diffs_v1.o data.o
 
